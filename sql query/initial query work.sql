@@ -14,12 +14,10 @@ SELECT COUNT(DISTINCT Course) FROM StudentData;
 SELECT Target, COUNT(*) FROM StudentData GROUP BY Target;
 
 
--- get average academic performance metrics for students based on their outcome, gender, course, and nationality
+-- get average academic performance metrics for students based on their outcome and gender
 SELECT 
     Target AS student_outcome,
     Gender,
-    Course,
-    Nationality,
     AVG(Age_at_enrollment) AS avg_age_at_enrollment,
     AVG(Curricular_units_1st_sem_grade) AS avg_1st_sem_grade,
     AVG(Curricular_units_2nd_sem_grade) AS avg_2nd_sem_grade,
